@@ -37,7 +37,7 @@ static void schedule_tasks2(void *arg)
         printf("wrote task %lu\n", i);
     }
     Async.run(async, greeting, NULL);
-    Async.signal(async);
+    //Async.signal(async);
     clock_gettime(CLOCK_REALTIME, &now);
     printf("# signal finish at (%lf) ms\n", time_diff(start, now));
 }
@@ -60,7 +60,7 @@ int main(void)
     /* create the thread pool with a single threads.
      * the callback is optional (we can pass NULL)
      */
-    async_p async = Async.create(32);
+    async_p async = Async.create(64);
     if (!async) {
         perror("Async creation failed");
         exit(1);

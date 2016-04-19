@@ -1321,7 +1321,7 @@ sig_srv:
         // set the stop server flag.
         srv->run = 0;
         // signal the async object to finish
-        Async.signal(srv->async);
+        //Async.signal(srv->async);
     }
     pthread_mutex_unlock(&global_lock);
 }

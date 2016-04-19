@@ -55,7 +55,7 @@ extern struct __ASYNC_API__ {
      *   Async.signal(async);
      * @endcode
      */
-    void (*signal)(async_p);
+    //void (*signal)(async_p);
 
     /**
      * \brief Waits for an Async object to finish up (joins all the threads
